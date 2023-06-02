@@ -9,9 +9,9 @@ The 'faq' directory contains possible problems and issues  along with their poss
 - bpftool
 > This should be already installed on your linux machine.
 - clang-13
-> Instructions to install clang-13: https://ubuntu.pkgs.org/20.04/ubuntu-proposed-universe-amd64/clang-13_13.0.1-2ubuntu2~20.04.1_amd64.deb.html
+> Instructions to install clang-13 on Ubuntu 20.04: https://ubuntu.pkgs.org/20.04/ubuntu-proposed-universe-amd64/clang-13_13.0.1-2ubuntu2~20.04.1_amd64.deb.html
 - BPF headers
 > Bpf headers don’t come with the kernel distro headers. Run ```sudo apt install libbpf-dev``` to install them.
 
 # Important Note
-> This work has been done and tested on kernel version ```5.15```.
+> This work has been done and tested on Ubuntu 20.04 with kernel version ```5.15```.
