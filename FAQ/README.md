@@ -1,4 +1,4 @@
-The following problem will definitely occur if you are using a clang version older than clang-13.
+The following problem would most probably occur if you are using a clang version older than clang-13.
 
 ## Main Problem 1
 You have original bpf_cubic.c (the one in this repository is slightly changed which will be discussed later in this file) and bpf_tcp_helpers.h from kernel examples.
