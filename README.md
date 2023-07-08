@@ -6,10 +6,6 @@ This repository is intended to be a simple guide for utilizing the eBPF tool in 
 - Follow the steps according the [compile_and_load.sh](src/compile_and_load.sh) file (Run the commands in the **`src`** directory).
 - In case of any problems and issues, refer to [this](#common-issues-and-possible-fixes) section.
 
-# Directory structure
-The **`src`** directory contains all the codes and scripts needed to follow the guide in the corresponding README.md file.
-The **`FAQ`** directory contains possible problems and issues  along with their possible solutions one might encounter while trying to write or load a custom TCP congestion control algorithm into the kernel using eBPF.
-
 # Requirements
 - bpftool
 > This should be already installed on your linux machine.
