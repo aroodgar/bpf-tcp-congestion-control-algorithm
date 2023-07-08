@@ -60,7 +60,7 @@ Without it, the error from compiling bpf selftests looks like:
 __ https://reviews.llvm.org/D93563
 ```
 
-According to the above statement, you will have to install clang-13 using the instructions link provided in the repo README.md file.
+According to the above statement, you will have to install clang-13 using the link provided in the [requirements](#requirements) section.
 
 ## Main Problem 2
 Compiling the original code with clang-13 and then loading solves the previous issue of not finding BTF for extern functions ([Main Problem 1](#main-problem-1)). Although, a new one will most probably emerge when trying to load the object file into the kernel using bpftool.
