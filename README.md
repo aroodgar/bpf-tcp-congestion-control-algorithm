@@ -1,14 +1,14 @@
 # bpf-tcp-congestion-control-algorithm
 This repository is intended to be a simple guide for utilizing the eBPF tool in order to write and load a custom TCP congestion control algorithm into the Linux kernel.
 
-# General guide
+## General guide
 - Make sure you have all the [requirements](#requirements) installed.
 - Follow the steps according the [compile_and_load.sh](src/compile_and_load.sh) file (Run the commands in the **`src`** directory).
 - In case of any problems and issues, refer to [this](#common-issues-and-possible-fixes) section.
 
 **If you want to know more about what actually happens under the hood, when going through these steps, refer to [this](https://lwn.net/Articles/811631/) page.**
 
-# Requirements
+## Requirements
 - bpftool
 > This should be already installed on your linux machine.
 - clang-13
@@ -24,13 +24,13 @@ This repository is intended to be a simple guide for utilizing the eBPF tool in 
 > 
 > Installation guide: https://github.com/iovisor/bcc/tree/master
 
-# Important Note
+## Important Note
 > This work has been done and tested on Ubuntu 20.04 with kernel version `5.15`.
 
-# Common issues and possible fixes
+## Common issues and possible fixes
 The following problem would most probably occur if you are using a clang version older than clang-13.
 
-## Main Problem 1
+### Main Problem 1
 You have original bpf_cubic.c (the one in this repository is slightly changed which will be discussed later in this file) and bpf_tcp_helpers.h from kernel examples.
 The can be found from the following addresses:
 `tools/testing/selftests/bpf/progs/bpf_cubic.c`
@@ -64,7 +64,7 @@ __ https://reviews.llvm.org/D93563
 
 According to the above statement, you will have to install clang-13 using the link provided in the [requirements](#requirements) section.
 
-## Main Problem 2
+### Main Problem 2
 Compiling the original code with clang-13 and then loading solves the previous issue of not finding BTF for extern functions ([Main Problem 1](#main-problem-1)). Although, a new one will most probably emerge when trying to load the object file into the kernel using bpftool.
 
 In the error logs, the output of the `sudo bpftool struct_ops register bpf_cubic.o` command ends as follows:
