@@ -6,6 +6,8 @@ This repository is intended to be a simple guide for utilizing the eBPF tool in 
 - Follow the steps according the [compile_and_load.sh](src/compile_and_load.sh) file (Run the commands in the **`src`** directory).
 - In case of any problems and issues, refer to [this](#common-issues-and-possible-fixes) section.
 
+**If you want to know more about what actually happens under the hood, when going through these steps, refer to [this](https://lwn.net/Articles/811631/) page.**
+
 # Requirements
 - bpftool
 > This should be already installed on your linux machine.
