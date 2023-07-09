@@ -42,7 +42,7 @@ Then it will be loaded using  `sudo bpftool struct_ops register bpf_cubic.o`.
 The ensuing error will be something like this:
 `libbpf: failed to find BTF for extern 'tcp_cong_avoid_ai' [41] section: -2`
 
-This shows that bpftool has a problem with finding the BTF mapping for the extern function types used in bpf_cubic.c.
+This shows that bpftool has problem finding the [BTF](https://www.kernel.org/doc/html/next/bpf/btf.html) mapping for the extern function types used in bpf_cubic.c.
 
 Below cites a note from the README.rst file in the linux source tree located at `tools/testing/selftests/bpf/README.rst`:
 
